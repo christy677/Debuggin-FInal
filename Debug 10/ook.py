@@ -129,10 +129,7 @@ def skipLoop(commands:str, startList:list):
         if state == 'start':
             startList.append(i)
         elif state == 'stop':
-            if len(startList) > 1:
-                startList.pop()
-            else:
-                return int(i + 1)
+            return int(i + 1)
     return 0
 
 def parseBrain(brainText:str):
