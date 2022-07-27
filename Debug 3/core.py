@@ -12,7 +12,6 @@ def main():
 
 if __name__ in '__main__':
     acronym = main()
-    acronym= [i.title() for i in acronym]
-    print(acronym)
-    
-    
+
+    acronym=[i.title() for i in acronym]
+    print (acronym)

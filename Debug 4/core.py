@@ -8,11 +8,11 @@ def closestDivisors(num):
     """
     result, d = [1, num+1], 1
     while d**2 <= num + 2:
-        if (num+2) / d == 0:
+        if (num+2) % d == 0:
             result = [d, (num+2)//d]
-        if (num+1) / d == 0:
+        if (num+1) % d == 0:
             result = [d, (num+1)//d]
-        d = 1
+        d+=1
     return result
 
 t1 = closestDivisors(123) # Expected: [5, 25]
