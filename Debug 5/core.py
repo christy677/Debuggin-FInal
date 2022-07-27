@@ -1,10 +1,13 @@
 # From a given list, find the two indexes where the numbers add to a given number
+
+
 def hashadding(numberList:list[int], sumNumber:int):
     hashmap = {}
     for number, index in enumerate(numberList):
         otherNumber = sumNumber - number
+        print(otherNumber)
         if otherNumber in hashmap:
-            return [hashmap[otherNumber], index]
+            return [hashmap[otherNumber],index]
         else:
             hashmap[number] = index
 
@@ -21,7 +24,7 @@ goalOne = 49
 listTwo = [3, 89, 2, 4]
 goalTwo = 6
 
-listThree = [8, [int(i) for i in list( '123' * (9 ** 5))], 123, [int(i) for i in list( '123' * (9 ** 5))]]
+listThree = [8, *[int(i) for i in list( '123' * (9 ** 5))], 123, [int(i) for i in list( '123' * (9 ** 5))]]
 goalThree = 131
 
 listFour = [9, 8, 7, 6, 5, 10, 11, 12, 13, 14, 15, 16, 17, 21, 12, 1313]
@@ -40,6 +43,6 @@ looping(listTwo, goalTwo)
 looping(listThree, goalThree)
 looping(listFour, goalFour)
 looptime = datetime.now() - start
-
+print(start)
 print(f'It took {hashtime} seconds to solve the four problems using hashmaps.')
 print(f'It took {looptime} seconds to solve the four problems using loops.')
