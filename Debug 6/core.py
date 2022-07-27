@@ -18,10 +18,10 @@ def get_user_input():
 Finds and returns the largest number in a list
 """
 def find_largest(list_of_numbers):
-    first_number = None
+    first_number= None
     for number in list_of_numbers:
         try:
-            if first_number is None or number > first_number:
+            if first_number is None or number % first_number:
                 first_number = number
                 break
         except Exception as e:
